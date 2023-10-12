@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FirstController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +19,7 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
+Route::get('/controller',[FirstController::class,'index'])->name('index');
+
 
