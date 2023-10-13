@@ -19,9 +19,9 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });
-Route::group(['middleware'=>['profdgyurygvuyurtected']],function(){
-    Route::view('test','test');
-});
+// Route::group(['middleware'=>['profdgyurygvuyurtected']],function(){
+//     Route::view('test','test');
+// });
 // Route::get('/controller',[FirstController::class,'index'])->name('index');
 
-
+Route::view('test','test')->middleware('route');

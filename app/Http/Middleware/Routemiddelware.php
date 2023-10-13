@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class Groupmiddelware
+class Routemiddelware
 {
     /**
      * Handle an incoming request.
@@ -15,9 +15,9 @@ class Groupmiddelware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // if($request->age && $request->age<19){
-        //     return redirect('index');
-        // }
+        if($request->age && $request->age<19){
+            return redirect('index');
+        }
         return $next($request);
     }
 }
