@@ -44,9 +44,9 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
-        // 'profdgyurygvuyurtected'=>[
-        //     \App\Http\Middleware\Groupmiddelware::class,
-        // ]
+        'profdgyurygvuyurtected'=>[
+            \App\Http\Middleware\Groupmiddelware::class,
+        ]
     ];
 
     /**

@@ -15,9 +15,9 @@ class Groupmiddelware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // if($request->age && $request->age<19){
-        //     return redirect('index');
-        // }
+        if($request->age && $request->age<19){
+            return redirect('index');
+        }
         return $next($request);
     }
 }
