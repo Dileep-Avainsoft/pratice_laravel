@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +20,5 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('index');
 });
-// Route::group(['middleware'=>['profdgyurygvuyurtected']],function(){
-//     Route::view('test','test');
-// });
-// Route::get('/controller',[FirstController::class,'index'])->name('index');
-
-Route::view('test','test')->middleware('route');
+Route::get('test',[ClientController::class,'client'])->name('client');
+// Route::get('/users',[UsersController::class,'index']);
